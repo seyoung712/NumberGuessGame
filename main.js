@@ -58,6 +58,8 @@ function play() {
     
     if(chances < 1){
         gameOver = true;
+    }
+    if(gameOver){
         playButton.disabled = true;
     }
     
@@ -72,6 +74,10 @@ function reset() {
 
     //결과창 초기화
     resultArea.textContent = "결과가 여기에 나옵니다.";
+    chanceArea.textContent="남은 기회 : 5번";
+
+    //history 초기화
+    history.length = 0;
 }
 
 pickRandomNumber();
